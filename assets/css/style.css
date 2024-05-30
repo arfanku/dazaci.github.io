@@ -82,7 +82,7 @@ h6 {
 }
 
 #header .logo {
-  font-size: 32px;
+  font-size: 25px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -98,7 +98,7 @@ h6 {
   max-height: 40px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   #header {
     padding: 12px 0;
   }
@@ -189,7 +189,7 @@ h6 {
   color: #fff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -358,7 +358,7 @@ h6 {
   filter: drop-shadow(0 0 10px rgb(187, 0, 255));
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   #hero {
     height: 100vh;
   }
@@ -397,7 +397,7 @@ h6 {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   #hero .hero-img img {
     width: 80%;
   }
@@ -461,7 +461,7 @@ section {
   z-index: 2;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .section-title h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -569,39 +569,32 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 999;
-  justify-content: center;
-  align-items: center;
+  padding: 3rem 8rem;
+  overflow: auto;
 }
 
 .product-detail-overlay.active {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
 
-.product-detail {
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
-}
-
-.product-detail img {
-  position: absolute;
-  top: 15%;
-  left: 10%;
-  width: 80vh;
-  height: 80vh;
+.product-detail-overlay img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 100%;
 }
 
 .product-detail-info {
-  position: absolute;
-  font-size: large;
+  flex-grow: 1;
+  font-size: 20px;
   color: #fff;
-  top: 30%;
-  left: 50%;
-  margin: 10px;
 }
 
 .judul {
@@ -629,70 +622,82 @@ section {
 }
 
 /* Responsivitas */
+@media screen and (max-width: 992px) {
+  .product-detail-img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .product-detail-overlay.active {
+    padding: 2rem 6rem;
+  }
+
+  .product-detail-overlay img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .judul {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .product-detail-info {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 768px) {
   .product {
     width: calc(50% - 20px); /* 2 produk per baris */
+  }
+
+  .product-detail-overlay.active {
+    padding: 1rem 4rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-detail-overlay img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .judul {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+
+  .product-detail-info {
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .product {
-    width: calc(100% - 20px); /* 1 produk per baris */
+    width: calc(70% - 20px); /* 1 produk per baris */
+    margin: auto;
   }
-}
 
-/*--------------------------------------------------------------
-# Team
---------------------------------------------------------------*/
+  .product-detail-overlay.active {
+    padding: 1rem 2rem;
+  }
 
-.team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 30px 20px;
-  background: #ffffff61;
-  border-radius: 10px;
-}
+  .product-detail-overlay img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    gap: 0.5rem;
+  }
 
-.team .member img {
-  max-width: 100%;
-  margin: 0 0 30px 0;
-}
+  .judul {
+    font-size: 20px;
+  }
 
-.team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.team .member p {
-  padding-top: 10px;
-  font-size: 14px;
-  font-style: italic;
-  color: #aaaaaa;
-}
-
-.team .member .social {
-  margin-top: 15px;
-}
-
-.team .member .social a {
-  color: #919191;
-  transition: 0.3s;
-}
-
-.team .member .social a:hover {
-  color: #000000;
-}
-
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+  .product-detail-info {
+    font-size: 14px;
+  }
 }
 
 /*--------------------------------------------------------------

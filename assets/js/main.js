@@ -296,43 +296,56 @@ function showProductDetail(productId) {
   // Set data produk sesuai dengan ID produk yang diklik
   switch (productId) {
     case 1:
-      imageSrc = "../assets/img/summer.png";
+      imageSrc = "assets/img/summer.png";
       name = "Summer Hot";
       description =
         "  Seorang perempuan cantik yang sedang berolahraga menikmati hangatnya musim panas";
-      price = "$100";
+      price = "$20";
       break;
     case 2:
-      imageSrc = "../assets/img/friend.png";
+      imageSrc = "assets/img/friend.png";
       name = "Persahabatan Manis";
       description = "  2 Wanita yang manis dengan hubungan persahabatanya";
-      price = "$150";
+      price = "$15";
       break;
     case 3:
-      imageSrc = "../assets/img/dg.png";
+      imageSrc = "assets/img/dg.png";
       name = "Elaphent Fantasy";
       description = "  Kepala gajah yang memiliki aura mistik dan mencekam";
-      price = "$200";
+      price = "$50";
       break;
     case 4:
-      imageSrc = "../assets/img/women.png";
+      imageSrc = "assets/img/women.png";
       name = "Ayu";
       description =
         "  Seorang wanita cantik yang mengenakan pakaian adat kebaya berwarna hijau";
-      price = "$250";
+      price = "$80";
       break;
     case 5:
-      imageSrc = "../assets/img/design.png";
+      imageSrc = "assets/img/design.png";
       name = "Dazaci Members";
       description = "  Kelompok wirausahawan muda yang ingin berkarya";
-      price = "$290";
+      price = "$1000";
       break;
+    case 6:
+      imageSrc = "assets/img/botak.png";
+      name = "Stronger";
+      description = "  Seorang dengan gelar yang terkuat";
+      price = "$60";
+      break;
+    case 7:
+      imageSrc = "assets/img/muzan.png";
+      name = "Demon king";
+      description = "  Seorang dengan gelar yang terkuat";
+      price = "$60";
+      break;
+
     default:
       break;
   }
 
   // Menyimpan informasi produk yang dipilih
-  selectedProduct.name = "Nama " + name;
+  selectedProduct.name = name;
   selectedProduct.price = price;
 
   // Menetapkan data produk ke elemen HTML
